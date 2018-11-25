@@ -1,0 +1,183 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+    
+    {%  block extrahead %}
+    {% endblock %}
+	  
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    
+    <!-- Hamburgers.css -->
+    <link rel="stylesheet" href="{%  static 'css/hamburgers.css' %}">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{%  static 'css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{%  static 'css/icomoon.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{%  static 'css/bootstrap.css' %}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{%  static 'css/magnific-popup.css' %}">
+
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="{%  static 'css/flexslider.css' %}">
+
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{%  static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{%  static 'css/owl.theme.default.min.css' %}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{%  static 'css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{%  static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	
+    <title>{%  block tittle %} App Grupos Investigacion {% endblock %}</title>
+</head>
+<body>
+    
+    <div class="colorlib-loader"></div>
+
+	<div id="page">
+
+	{% block navbar %}
+        
+        
+        <nav class="colorlib-nav" role="navigation">
+			<div class="top-menu">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2">
+							<! -- lOGO -->
+						</div>
+						<div class="col-xs-10 text-right menu-1">
+							<ul>
+								<li class="active"><a href="{% url 'index' %}">Home</a></li>
+								<li class="has-dropdown">
+									<a>Grupos de Investigacion</a>
+									<ul class="dropdown">
+										<li><a href="{% url 'GRIIS:griis' %}">GRIIS</a></li>
+										<li><a href="{% url 'GEGI:gegi' %}">GEGI</a></li>
+										<li><a href="{% url 'GIP:gip' %}">GIP</a></li>
+										<li><a href="{% url 'GISIC:gisic' %}">GISIC</a></li>
+									</ul>
+								</li>
+								<li><a href="{% url 'about' %}">About Me</a></li>
+								<li><a href="{% url 'contact' %}">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+    
+	{% endblock %}
+
+	{% block content %}
+	
+        
+    {% endblock %}
+        
+        <div id="colorlib-instagram">
+			<div class="row">
+				<div class="instagram-entry">
+					<a href="#" class="instagram text-center" style="background-image: url({%  static 'images/gallery-11.jpg' %});"></a>
+					<a href="#" class="instagram text-center" style="background-image: url({%  static 'images/gallery-22.jpg' %});"></a>
+					<a href="#" class="instagram text-center" style="background-image: url({%  static 'images/gallery-33.jpg' %});"></a>
+					<a href="#" class="instagram text-center" style="background-image: url({%  static 'images/gallery-44.jpg' %});"></a>
+					<a href="#" class="instagram text-center" style="background-image: url({%  static 'images/gallery-55.jpg' %});"></a>
+					<a href="#" class="instagram text-center" style="background-image: url({%  static 'images/gallery-66.png' %});"></a>
+					<a href="#" class="instagram text-center" style="background-image: url({%  static 'images/gallery-77.jpg' %});"></a>
+					<a href="#" class="instagram text-center" style="background-image: url({%  static 'images/gallery-88.jpg' %});"></a>
+				</div>
+			</div>
+		</div>
+    
+    {% block footer %}
+    
+		<footer id="colorlib-footer" role="contentinfo">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-4">
+						<ul>
+							<p class="copyright text-center">©
+		                    	<script>document.write(new Date().getFullYear())</script>
+		                    	<a>Universidad Catolica de Colombia</a>
+		                    </p>
+							<li>PBX: (57 1) 3 27 73 00 - (57 1) 3 27 73 33</li>
+						</ul>
+					</div>
+					<div class="col-12 col-sm-4">
+						<ul>
+							<li>Sede Las Torres - Bogotá,  Avenida Caracas # 46 -72</li>
+						</ul>
+						<ul>
+							<li>Sede 4 - Bogotá,  Carrera 13 # 47 – 30</li>
+						</ul>
+					</div>
+					<div class="col-12 col-sm-4">
+						<ul>
+							<li>Sede El Claustro - Bogotá,  Diagonal 46 A # 15 B – 10</li>
+						</ul>
+						<ul>
+							<li>Sede Carrera 13 - Bogotá,  Carrera 13 # 47 – 49</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </footer>
+    
+    {% endblock %}
+    </div>
+    
+    <div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up2"></i></a>
+	</div>
+    
+	<!-- jQuery -->
+	<script src="{%  static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{%  static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{%  static 'js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{%  static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Flexslider -->
+	<script src="{%  static 'js/jquery.flexslider-min.js' %}"></script>
+	<!-- Owl carousel -->
+	<script src="{%  static 'js/owl.carousel.min.js' %}"></script>
+	<!-- Magnific Popup -->
+	<script src="{%  static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{%  static 'js/magnific-popup-options.js' %}"></script>
+	<!-- Main -->
+	<script src="{%  static 'js/main.js' %}"></script>
+	
+    {% block extrajs %}
+    {% endblock %}
+    
+</body>
+</html>

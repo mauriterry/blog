@@ -1,0 +1,102 @@
+{% extends 'base/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+	<aside id="colorlib-hero">
+			<div class="flexslider">
+				<ul class="slides">
+    			   	<li style="background-image: url({% static 'images/sede_4.jpg' %});"></li>
+    			   	<li style="background-image: url({% static 'images/sede_trece.jpg' %});"></li>
+    			   	<li style="background-image: url({% static 'images/sede_claustro.jpg' %});"></li>
+    			   	<li style="background-image: url({% static 'images/sede_torres.jpeg' %});"></li>
+    			   	<li style="background-image: url({% static 'images/entrada_sede_trece.jpg' %});"></li>
+			  	</ul>
+		  	</div>
+		</aside>
+
+        <div id="colorlib-container">
+			<div class="container">
+				<div class="row row-pb-md">	
+				{% for entrada in object_list %}
+					<div class="col-md-4">
+    					<div class="blog-entry">
+    						<div class="blog-slider">
+								<div class="owl-carousel">
+									<div class="item">
+										<a href="/entrada/{{entrada.slug}}" class="image-popup-link"><img src="{% static 'images/gallery-11.jpg' %}" class="img-responsive" alt="html5 bootstrap template"></a>
+									</div>
+									<div class="item">
+										<a href="/entrada/{{entrada.slug}}" class="image-popup-link"><img src="{% static 'images/gallery-22.jpg' %}" class="img-responsive" alt="html5 bootstrap template"></a>
+									</div>
+								</div>
+							</div>
+        					<div class="desc">
+	        					 <h2><a href="/entrada/{{entrada.slug}}">{{ entrada.titulo }}</a></h2>
+	        					 <p>{{ entrada.descripcion }}</p>
+        				    </div>
+    					</div>
+    				</div>
+    			{% endfor %}
+    				<!--<div class="col-md-4">
+    					<div class="blog-entry">
+    						<div class="blog-slider">
+								<div class="owl-carousel">
+									<div class="item">
+										<a href="{% url 'GEGI:gegi' %}" class="image-popup-link"><img src="{% static 'images/gallery-11.jpg' %}" class="img-responsive" alt="html5 bootstrap template"></a>
+									</div>
+									<div class="item">
+										<a href="{% url 'GEGI:gegi' %}" class="image-popup-link"><img src="{% static 'images/gallery-22.jpg' %}" class="img-responsive" alt="html5 bootstrap template"></a>
+									</div>
+								</div>
+							</div>
+        					<div class="desc">
+        					    <h2><a href="{% url 'GEGI:gegi' %}">GEGI</a></h2>
+        					    <p>Gestión Integral y dinámica de las Organizaciones Empresariales</p>
+        					    <p>Flor Nancy Díaz Piraquive</p>
+        				    </div>
+    					</div>
+    				</div>
+    				<div class="col-md-4">
+    					<div class="blog-entry">
+    						<div class="blog-slider">
+								<div class="owl-carousel">
+									<div class="item">
+										<a href="{% url 'GIP:gip' %}" class="image-popup-link"><img src="{% static 'images/gallery-11.jpg' %}" class="img-responsive" alt="html5 bootstrap template"></a>
+									</div>
+									<div class="item">
+										<a href="{% url 'GIP:gip' %}" class="image-popup-link"><img src="{% static 'images/gallery-22.jpg' %}" class="img-responsive" alt="html5 bootstrap template"></a>
+									</div>
+								</div>
+							</div>
+        					<div class="desc">
+        					    <h2><a href="{% url 'GIP:gip' %}">GIP</a></h2>
+        					    <p>Gestión integral y dinámica de las organizaciones empresariales</p>
+        					    <p>Mauricio Becerra Fernández</p>
+        				    </div>
+    					</div>
+    				</div>
+    				<div class="col-md-4">
+    					<div class="blog-entry">
+    						<div class="blog-slider">
+								<div class="owl-carousel">
+									<div class="item">
+										<a href="{% url 'GISIC:gisic' %}" class="image-popup-link"><img src="{% static 'images/gallery-11.jpg' %}" class="img-responsive" alt="html5 bootstrap template"></a>
+									</div>
+									<div class="item">
+										<a href="{% url 'GISIC:gisic' %}" class="image-popup-link"><img src="{% static 'images/gallery-22.jpg' %}" class="img-responsive" alt="html5 bootstrap template"></a>
+									</div>
+								</div>
+							</div>
+        					<div class="desc">
+        					    <h2><a href="{% url 'GISIC:gisic' %}">GISIC</a></h2>
+        					    <p>Software inteligente y convergencia tecnológica</p>
+        					    <p>Holman Diego Bolívar Barón</p>
+        				    </div>
+    					</div>
+    				</div>-->
+                </div>
+            </div>
+        </div> 
+
+{% endblock %}
